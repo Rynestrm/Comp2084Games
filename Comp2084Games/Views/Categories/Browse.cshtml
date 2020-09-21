@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Browse";
+}
+
+<!--ONly show the category name if we have a valid categoryName value-->
+@if (ViewBag.categoryName == null)
+{
+    <h1>Please choose a category</h1>
+    <a asp-Controller="Categories" asp-action="Index">Back</a>
+}
+
+<h1>You Are Browsing Games @ViewBag.categoryName</h1>
